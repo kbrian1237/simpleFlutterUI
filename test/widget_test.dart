@@ -19,8 +19,9 @@ void main() {
     expect(find.text('Creative Playground'), findsOneWidget);
     expect(find.byIcon(Icons.palette), findsOneWidget);
 
-    // Wait for splash screen animation and navigation
-    await tester.pumpAndSettle(const Duration(seconds: 4));
+    // Wait for splash screen animation and navigation with longer timeout
+    await tester.pump(const Duration(seconds: 3));
+    await tester.pumpAndSettle();
 
     // Verify that we navigate to the home page
     expect(find.text('Welcome to Your'), findsOneWidget);
@@ -32,7 +33,8 @@ void main() {
     await tester.pumpWidget(const CreativePlaygroundApp());
 
     // Wait for splash screen to complete
-    await tester.pumpAndSettle(const Duration(seconds: 4));
+    await tester.pump(const Duration(seconds: 3));
+    await tester.pumpAndSettle();
 
     // Test navigation to Color Mixer
     await tester.tap(find.text('Colors'));

@@ -2,6 +2,11 @@
 
 A vibrant and interactive Flutter application that unleashes creativity through colorful animations, interactive widgets, and engaging user interfaces!
 
+## 🚀 Live Demo
+**[Try the app live here!](https://kbrian1237.github.io/simpleFlutterUI/)**
+
+The app is automatically deployed to GitHub Pages using GitHub Actions.
+
 ## Features
 
 ### 🌟 Splash Screen with Animations
@@ -141,11 +146,20 @@ This project is created for educational purposes as part of a Flutter developmen
 
 ## Deployment
 
-The app is deployed and accessible via GitHub Pages. The web build includes:
-- Optimized assets with tree-shaking
-- Compressed fonts and icons
-- Fast loading times
-- Cross-browser compatibility
+The app is automatically deployed to GitHub Pages at: **https://kbrian1237.github.io/simpleFlutterUI/**
+
+### Automatic Deployment
+- GitHub Actions workflow automatically builds and deploys on every push to master
+- Optimized web build with tree-shaking for smaller bundle size
+- CanvasKit renderer for better performance and compatibility
+- Compressed fonts and icons for faster loading
+
+### Manual Deployment
+To deploy manually:
+```bash
+flutter build web --release --web-renderer canvaskit
+# Files will be in build/web directory
+```
 
 ---
 
